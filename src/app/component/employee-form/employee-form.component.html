@@ -1,0 +1,21 @@
+<p>employee-form works!</p>
+<form #empForm="ngForm" (ngSubmit)="onSubmit()">
+    <label for="empid">Employee no : </label>
+    <input type="text" name="empno" id="empid" placeholder="Enter employee no : " #txtempno="ngModel"
+        [(ngModel)]="empobj.empno" required />
+
+    <br><br>
+    <label for="empname">Employee name : </label>
+    <input type="text" name="empname" id="empname" placeholder="Enter employee name" #txtempname="ngModel"
+        [(ngModel)]="empobj.empname" required pattern="^[a-z A-Z]+$" />
+    <br><br>
+    <div *ngIf="txtempname.invalid && (txtempname.dirty || txtempname.touched)" style="color:red;">
+        Please enter proper employee name
+    </div>
+
+    <br><br><label for="empsal">Employee salary : </label>
+    <input type="text" name="empsal" id="empsal" placeholder="Enter employee salary" #txtempsal="ngModel"
+        [(ngModel)]="empobj.empsal" required />
+    <br><br>
+    <button type="submit" [disabled]="empForm.invalid">Submit</button>
+</form>

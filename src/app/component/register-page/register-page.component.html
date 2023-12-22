@@ -1,0 +1,81 @@
+
+<h2>Register <button mat-icon-button style="margin-left: 400px;" (click)="closeDialog()">
+    <mat-icon>close</mat-icon>
+</button></h2>
+
+<mat-dialog-content>
+   
+    <!-- register-page.component.html -->
+<form [formGroup]="registrationForm" (ngSubmit)="submitForm()" class="form">
+    
+    <div id="upload-container">
+      <img src="../assets/images/user.jpg" class="upload-icon" required/><br>
+      <label for="upload-input" id="upload-btn">Click to Upload</label>
+      <input type="file" formControlName="image" id="upload-input" required />
+    </div>
+    <div class="cont">
+    <input type="text" formControlName="firstName" placeholder="First Name" class="name" pattern="^[a-z A-Z]+$"
+    required/>
+    <!-- <div *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+      <div *ngIf="registrationForm.get('firstName')?.hasError('required')">First Name is required</div>
+      <div *ngIf="registrationForm.get('firstName')?.hasError('pattern')">Only alphabetic characters are allowed</div>
+      <div *ngIf="registrationForm.get('firstName')?.hasError('maxlength')">Maximum length is 20 characters</div>
+    </div> -->
+    <input type="text" formControlName="lastName" class="last" placeholder="Last name" pattern="^[a-z A-Z]+$"
+    required/> <br>
+    <!-- <div *ngIf="registrationForm.get('lastname')?.invalid && (registrationForm.get('lastname')?.dirty || registrationForm.get('lastname')?.touched)">
+      <div *ngIf="registrationForm.get('lastname')?.hasError('required')">Last Name is required</div>
+      <div *ngIf="registrationForm.get('lastname')?.hasError('pattern')">Only alphabetic characters are allowed</div>
+      <div *ngIf="registrationForm.get('lastname')?.hasError('maxlength')">Maximum length is 20 characters</div>
+    </div><br> -->
+  
+    
+  
+    <!-- Age Slider -->
+    <label for="age" >Age</label>
+    <input type="range" formControlName="age" min="18" max="100" class="age" required/>
+    <span>{{ registrationForm.get('age')?.value }}</span><br>
+  
+    <select formControlName="state" required=>
+      <option value="" selected>State</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Punjab">Punjab</option>
+    </select><br>
+
+    <select formControlName="country" required>
+      <option value="" selected>Country</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="London">London</option>
+    </select><br>
+
+    <!-- Interest Field -->
+    <input type="text" formControlName="interest" placeholder="tags"/><br>
+    
+    
+    <select formControlName="addressType" required>
+      <option value="home">Home</option>
+      <option value="company">Company</option>
+    </select>
+  
+    <!-- Address Fields (conditionally displayed based on addressType) -->
+    <div *ngIf="registrationForm.get('addressType')?.value === 'home'">
+      <input type="text" formControlName="address1" placeholder="Home Address"/>
+    </div>
+  
+    <div *ngIf="registrationForm.get('addressType')?.value === 'company'">
+      <input type="text" formControlName="companyAddress1" placeholder="Company Address"/>
+  
+    </div>
+    
+    <button type="submit" [disabled]="registrationForm.invalid" class="sub" [ngStyle]="{'background-color': registrationForm.invalid ? '#999' : '#3498db'}" (click)="openDashboard()">Submit</button>
+    <button (click)="closeDialog()" class="can">Cancel</button>
+  </div>
+  </form>
+  <script>
+    
+  </script>
+</mat-dialog-content>
+
+

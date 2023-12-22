@@ -1,0 +1,11 @@
+<p>students-signup works!</p>
+<h1>SighUp</h1>
+<form action="" #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+    <input type="text" name="name" id="name" placeholder="Enter name" ngModel><br><br>
+    <input type="text" name="username" id="username" placeholder="Enter Username" ngModel><br><br>
+    <input type="password" name="password" id="password" placeholder="Enter Password" ngModel> <br><br>
+    <input type="email" name="email" id="email" placeholder="Enter email" ngModel><br><br>
+    <input type="number" name="phone" id="phone" placeholder="Enter phone" ngModel><br><br>
+    <button>SignUP</button>
+</form>
+<h1>{{signupForm.value| json}}</h1>

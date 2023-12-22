@@ -1,0 +1,19 @@
+<p>employee-list works!</p>
+<p>employee-list works!</p>
+<h2>Employee List</h2>
+<table border="2" cellspacing="0">
+ <thead>
+      <tr>
+        <th>Employee No.</th>
+       <th>Employee Name</th>
+       <th>Employee salary</th>
+    </tr>
+       </thead>
+<tbody>
+ <tr *ngFor="let empobj of emparr">
+    <td>{{empobj.empno}}</td>
+    <td>{{empobj.empname}}</td>
+    <td>{{empobj.empsal}}</td>
+</tr>
+ </tbody>
+</table>

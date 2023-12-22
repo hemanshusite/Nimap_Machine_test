@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+h2{
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #3aa5dc;
+    padding: 3px 20px;
+}
+h2 button{
+    font-size: 12px;
+}
+#interest-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .interest {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cross-icon {
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  input{
+    padding: 10px 20px;
+    border: 1px solid gray;
+    outline: none;
+    color: grey;
+    /* width: 200px; */
+    border-radius: 5px;
+    margin: 2px 10px;
+    margin-top: 10px;
+    width: 270px;
+  }
+  select{
+    padding: 10px 20px;
+    border: 1px solid gray;
+    outline: none;
+    color: grey;
+    /* width: 242px; */
+    border-radius: 5px;
+    margin: 2px 10px;
+    margin-top: 10px;
+    width: 310px;
+  }
+  .form{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+  }
+  .pto{
+    width: 30%;
+    border: 2px solid black;
+  }
+  .cont{
+    width: 70%;
+    /* border: 2px solid black; */
+
+  }
+
+  .name{
+    width: 130px;
+    margin: 2px 10px;
+  }
+  .last{
+    width: 80px;
+  }
+  .can{
+    padding: 8px 15px;
+    border: 1px solid grey;
+    color: black;
+    border-radius: 3px;
+    background: none;
+    width: 30%;
+    margin: 10px;
+    font-weight: bold;
+    float: right;
+    transform: translateX(-20px);
+
+  }
+  .sub{
+    padding: 8px 15px;
+    border: 1px solid grey;
+    color: white;
+    border-radius: 3px;
+    background: #3498db;
+    width: 30%;
+    margin: 10px;
+    cursor: pointer;
+    float: right;
+    transform: translateX(-20px);
+  }
+  .age{
+    width: 200px;
+  }
+  
+
+  
+  .upload-icon {
+    width: 100px;
+    padding: 5px;
+  }
+  .upload-input {
+    display: block;
+    border: none;
+    margin: 0;
+    border: none;
+    background: none;
+
+  }
+
+
+
+  #upload-container {
+    text-align: center;
+  }
+
+  #upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #3498db;
+  }
+
+
+
+  #upload-input {
+    display: none;
+  }
